@@ -1,0 +1,23 @@
+{% load static %}{% load render_partial %}<!DOCTYPE html>
+<html lang="en">
+<script src="{% static 'Rmain/js/Jquery_src/jQuery_min.js' %}"></script>
+<script src="{% static 'Rmain/js/logged_in.js' %}"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}page{% endblock %}</title>
+    <link id="main_style" rel="stylesheet" href="{% static 'Rmain/css/main_style.css' %}">
+    <link id="header_style" rel="stylesheet" href="{% static 'Rmain/css/header_style.css' %}">
+    <link id="footer_style" rel="stylesheet" href="{% static 'Rmain/css/footer_style.css' %}">
+    {% block header_ref %}{% endblock %}
+</head>
+<body>
+{% block body_header %}
+{% render_partial 'Rmain.views.header' %}
+{% endblock %}
+{% block body %}{% endblock %}
+{% render_partial 'Rmain.views.footer' %}
+</body>
+<script src="{% static 'Rmain/js/theme.js' %}"></script>
+{% block footer_ref %}{% endblock %}
+</html>

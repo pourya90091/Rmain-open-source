@@ -1,0 +1,15 @@
+div.paragraphs{
+    margin-bottom: 50px;
+}
+#slider img{
+    width: 50%;
+}
+#slider{
+    text-align: center;
+}
+
+@media screen and (max-width:700px){
+    #slider img{
+        width: 90%;
+    }
+}

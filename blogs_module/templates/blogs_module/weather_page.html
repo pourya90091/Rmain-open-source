@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}weather{% endblock %}
+{% block header_ref %}
+    <link id="weather_style" rel="stylesheet" href="{% static 'blogs_module/css/weather_style.css' %}">
+{% endblock %}
+{% block body_header %}{% render_partial 'blogs_module.views.blogs_header' %}{% endblock %}
+{% block body %}
+    <h1 class="title">weather</h1>
+    <div class="paragraphs">
+        <p>temp is <span id="temp">...</span> in tehran</p>
+    </div>
+{% endblock %}
+{% block footer_ref %}
+    <script src="{% static 'blogs_module/js/temp.js' %}"></script>
+{% endblock %}

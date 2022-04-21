@@ -1,0 +1,13 @@
+.video_file{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+@media screen and (max-width:900px){
+    .video_file{
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}

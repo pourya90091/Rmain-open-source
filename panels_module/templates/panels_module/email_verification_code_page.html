@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}email verification{% endblock %}
+{% block body %}
+    {% if error %}
+    <h2 class="error">Error : <span id="error">{{ error }}</span></h2>
+    {% else %}
+    <h2 class="title">
+        <a class="a" href="{% url 'panel-page' user.username %}">go to panel</a>
+    </h2>
+    {% endif %}
+{% endblock %}

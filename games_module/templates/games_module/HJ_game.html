@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}HJ game{% endblock %}
+{% block header_ref %}
+    <link id="HJ_game_style" rel="stylesheet" href="{% static 'games_module/css/HJ_game_style.css' %}">
+{% endblock %}
+{% block body_header %}{% render_partial 'games_module.views.games_header' %}{% endblock %}
+{% block body %}
+    <div id="HJ-buttons">
+    <button class="button" id="H" onclick="getH()">
+        حقیقت
+    </button>
+    <button class="button" id="J" onclick="getJ()">
+        جرعت
+    </button>
+    </div>
+    <div id="HJ-content">
+        <h2>یه جرعت یا حقیقت انتخاب کنید</h2>
+    </div>
+{% endblock %}
+{% block footer_ref %}
+    <script src="{% static 'games_module/js/HJ.js' %}"></script>
+{% endblock %}

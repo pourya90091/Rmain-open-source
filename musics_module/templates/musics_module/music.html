@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}music{% endblock %}
+{% block header_ref %}
+    <link id="music_style" rel="stylesheet" href="{% static 'musics_module/css/music_style.css' %}">
+{% endblock %}
+{% block body_header %}{% render_partial 'musics_module.views.music_header' %}{% endblock %}
+{% block body %}
+    <audio class="song_track" src="{{ MEDIA_URL }}{{ music.song_track }}" controls preload="none"></audio>
+{% endblock %}

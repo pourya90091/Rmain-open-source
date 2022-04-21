@@ -1,0 +1,14 @@
+    <div id="div-header">
+        <ul id="ul-header">
+            <li class="usual">
+                <button id="dark_theme_btn" onclick="dark_theme(this.value)" value="0"><a href="javascript:void(0)">dark theme</a></button>
+            </li>
+            {% if logged_in %}
+            <li class="li-header">
+                <button><a href="{% url 'home-page' %}">home page</a></button>
+            </li>
+            {% endif %}
+            {% block li %}{% endblock %}
+        </ul>
+        <div id="profile_icon"></div>
+    </div>

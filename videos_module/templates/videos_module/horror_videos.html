@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}horror videos{% endblock %}
+{% block body_header %}{% render_partial 'videos_module.views.videos_header' %}{% endblock %}
+{% block body %}
+    <ul>
+    {% for horror_video in horror_videos %}
+        <li>
+            <a class="a" href="{% url 'video-page' horror_video.name %}">{{ horror_video.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

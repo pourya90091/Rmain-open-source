@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load render_partial %}
+
+{% block title %}resume{% endblock %}
+{% block body_header %}{% render_partial 'blogs_module.views.blogs_header' %}{% endblock %}
+{% block body %}
+    <h1 class="title">resume</h1>
+    <div dir="rtl" class="paragraphs">
+        <p class="text">
+            مسلط به زبان برنامه نویسی Python و فریم ورک Django هستم.
+            <br>
+            با تکنولوژی و ابزار های مفیدی آشنایی دارم که میتونم توی پروژه هام ازشون استفاده کنم (REST API, Relational DB, Git, Docker ...).
+            <br>
+            توی استفاده از تکنولوژی و ابزار ها منعطف ام و همیشه درحال یادگیری چیزای جدیدم، ولی نقطه قوت ام زبان برنامه نویسی Python و فریم ورک Django هست.
+            <br>
+            من تازه کارم و سابقه ی شغلی ندارم. علاقه مند به کامپیوتر و برنامه نویسی هستم.
+        </p>
+    </div>
+{% endblock %}

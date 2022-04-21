@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}videos{% endblock %}
+{% block body %}
+    <h1 class="title">videos</h1>
+    <ul>
+    {% for genre in genres %}
+        <li>
+            <a class="a" href="{{ genre }}/">{{ genre }} videos</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

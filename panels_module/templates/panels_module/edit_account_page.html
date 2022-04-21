@@ -1,0 +1,18 @@
+{% extends 'panels_module/panel_page.html' %}
+
+{% block title %}{{ user.username }} - edit account{% endblock %}
+{% block options %}
+    <div id="options">
+        <button class="button" onclick="back()"><a class="a" href="javascript:void(0)">back</a></button>
+    </div>
+{% endblock %}
+{% block inputs %}
+    <div class="inputs">
+        <input class="input" type="text" placeholder="{{ user.username }}" id="username">
+        <input class="input" type="password" placeholder="new password" id="password1">
+        <input class="input" type="password" placeholder="confirm password" id="password2">
+        <input class="input" type="email" placeholder="{% if user.email %}{{ user.email }}{% else %}email{% endif %}" id="email">
+        <input class="input" type="file" accept=".jpg, .png" id="image">
+        <button class="btn" onclick="edit_account()">confirm</button>
+    </div>
+{% endblock %}

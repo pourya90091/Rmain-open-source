@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}video{% endblock %}
+{% block header_ref %}
+    <link id="video_style" rel="stylesheet" href="{% static 'videos_module/css/video_style.css' %}">
+{% endblock %}
+{% block body_header %}{% render_partial 'videos_module.views.video_header' %}{% endblock %}
+{% block body %}
+    <video class="video_file" src="{{ MEDIA_URL }}{{ video.video_file }}" controls preload="none"></video>
+{% endblock %}

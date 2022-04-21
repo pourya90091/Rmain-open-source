@@ -1,0 +1,9 @@
+.song_track{
+    display: block;
+    margin: auto;
+}
+.video{
+    display: block;
+    margin: auto;
+    width: 50%;
+}

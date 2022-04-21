@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}sing up{% endblock %}
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'sing_up_module/css/sing_up_page_style.css' %}">
+{% endblock %}
+{% block body %}
+    <h1 class="title">sing up</h1>
+    <h2 class="error">Error : <span id="error">error message</span></h2>
+    <div class="inputs">
+        <input class="input" type="text" placeholder="username" id="username">
+        <input class="input" type="password" placeholder="password" id="password">
+        <input class="input" type="email" placeholder="email" id="email">
+        <input class="input" type="file" accept=".jpg, .png" id="image">
+        <button class="btn" onclick="sing_up_request()">confirm</button>
+    </div>
+{% endblock %}
+{% block footer_ref %}
+    <script src="{% static 'sing_up_module/js/sing_up.js' %}"></script>
+{% endblock %}

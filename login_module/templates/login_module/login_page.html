@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}login{% endblock %}
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'login_module/css/login_page_style.css' %}">
+{% endblock %}
+{% block body %}
+    <h1 class="title">login</h1>
+    <h2 class="error">Error : <span id="error">error message</span></h2>
+    <div class="inputs">
+        <input class="input" type="text" placeholder="username" id="username">
+        <input class="input" type="password" placeholder="password" id="password">
+        <button class="btn" onclick="login_request()">confirm</button>
+        <button class="none_style_btn">
+            <a class="a" href="{% url 'recover-password-page' %}">recover password</a>
+        </button>
+    </div>
+{% endblock %}
+{% block footer_ref %}
+    <script src="{% static 'login_module/js/login.js' %}"></script>
+{% endblock %}

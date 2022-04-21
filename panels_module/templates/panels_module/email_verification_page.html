@@ -1,0 +1,15 @@
+{% extends 'panels_module/panel_page.html' %}
+
+{% block title %}{{ user.username }} - email verification{% endblock %}
+{% block options %}
+    <div id="options">
+        <button class="button" onclick="back()"><a class="a" href="javascript:void(0)">back</a></button>
+    </div>
+{% endblock %}
+{% block inputs %}
+    <div class="inputs">
+        <input class="input" type="password" placeholder="enter password" id="password1">
+        <input class="input" type="password" placeholder="confirm password" id="password2">
+        <button class="btn" onclick="email_verification(this)">send email</button>
+    </div>
+{% endblock %}

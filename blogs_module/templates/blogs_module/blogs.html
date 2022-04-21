@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load render_partial %}
+
+{% block title %}blogs{% endblock %}
+{% block body %}
+    <h1 class="title">blogs</h1>
+    <ul>
+    {% for blog in blogs %}
+        <li>
+            <a class="a" href="{{ blog }}">{{ blog }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

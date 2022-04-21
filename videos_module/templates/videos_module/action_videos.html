@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}action videos{% endblock %}
+{% block body_header %}{% render_partial 'videos_module.views.videos_header' %}{% endblock %}
+{% block body %}
+    <ul>
+    {% for action_video in action_videos %}
+        <li>
+            <a class="a" href="{% url 'video-page' action_video.name %}">{{ action_video.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

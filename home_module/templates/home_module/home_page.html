@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}home{% endblock %}
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'home_module/css/home_page_style.css' %}">
+{% endblock %}
+{% block body %}
+    <h1 class="title">home</h1>
+    <div class="paragraphs">
+        <p class="text">به سایت خودت خوش اومدی :)</p>
+        <p class="text">اینجا همه چی داریم</p>
+        <p class="text">جوجه داریم مثلا</p>
+    </div>
+
+    <div id="slider">
+        <img src="{%  static 'home_module/img/jooje.jpg' %}" alt="jooje">
+    </div>
+
+    <ul>
+        <li>
+            <a class="a" href="{% url 'login-page' %}">login</a>
+        </li>
+        <li>
+            <a class="a" href="{% url 'sing-up-page' %}">sing up</a>
+        </li>
+        <li>
+            <a class="a" href="{% url 'games-page' %}">games</a>
+        </li>
+        <li>
+            <a class="a" href="{% url 'blogs-page' %}">blogs</a>
+        </li>
+        <li>
+            <a class="a" href="{% url 'musics-page' %}">musics</a>
+        </li>
+        <li>
+            <a class="a" href="{% url 'videos-page' %}">videos</a>
+        </li>
+        <li>
+            <a class="a" href="/">index page</a>
+        </li>
+    </ul>
+{% endblock %}

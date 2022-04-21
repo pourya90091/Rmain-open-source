@@ -1,0 +1,15 @@
+#username_span{
+    color: #f6eb1f;
+}
+#profile_image{
+    display: block;
+    width: 100px;
+    margin: auto;
+    color: white;
+}
+#options{
+    margin-left: 10px;
+}
+p{
+    color: white;
+}

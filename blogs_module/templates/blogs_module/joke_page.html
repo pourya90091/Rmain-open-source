@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}joke{% endblock %}
+{% block header_ref %}
+    <link id="joke_style" rel="stylesheet" href="{% static 'blogs_module/css/joke_style.css' %}">
+{% endblock %}
+{% block body_header %}{% render_partial 'blogs_module.views.blogs_header' %}{% endblock %}
+{% block body %}
+    <h1 class="title">jokes</h1>
+    <div dir="rtl" id="jokes">
+    {% for joke in jokes %}
+        <div id="{{ joke.id }}" class="joke-box">
+            <h2 class="joke-title">{{ joke.title }}</h2>
+            <p class="text">{{ joke.text }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+    </div>
+    <div id="options">
+        <button id="show_more" class="btn" onclick="show_more(this)">show more</button>
+        <button id="show_less" class="btn" onclick="show_less()">show less</button>
+    </div>
+{% endblock %}
+{% block footer_ref %}
+    <script src="{% static 'blogs_module/js/joke_script.js' %}"></script>
+{% endblock %}

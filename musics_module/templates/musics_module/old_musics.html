@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}old musics{% endblock %}
+{% block body_header %}{% render_partial 'musics_module.views.musics_header' %}{% endblock %}
+{% block body %}
+    <ul>
+    {% for old_music in old_musics %}
+        <li>
+            <a class="a" href="{% url 'music-page' old_music.name %}">{{ old_music.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

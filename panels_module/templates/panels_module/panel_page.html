@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ user.username }}{% endblock %}
+{% block header_ref %}
+    <link id="panel_page_style" rel="stylesheet" href="{% static 'panels_module/css/panel_page_style.css' %}">
+{% endblock %}
+{% block body %}
+    {% block options %}
+    <div id="options">
+        <button class="button"><a class="a" href="{% url 'edit-account-page' user.username %}">edit account</a></button>
+        <button class="button"><a class="a" href="{% url 'delete-account-page' user.username %}">delete account</a></button>
+        <button class="button"><a class="a" href="{% url 'email-verification-page' user.username %}">email verification</a></button>
+        <button class="button" onclick="delete_profile_image()"><a class="a" href="javascript:void(0)">delete profile image</a></button>
+        <button class="button" onclick="logout()"><a class="a" href="javascript:void(0)">log out</a></button>
+    </div>
+    {% endblock %}
+    <h1 class="title">panel</h1>
+    <img id="profile_image" src="{% if user.image %}{{ MEDIA_URL }}{% endif %}{{ user.image }}" alt="profile image">
+    <h2 class="error">Error : <span id="error">error message</span></h2>
+    <div class="paragraphs">
+        <p>here is <span id="username_span">{{ user.username }}</span> panel</p>
+    </div>
+    {% block inputs %}{% endblock %}
+{% endblock %}
+{% block footer_ref %}
+    <script src="{% static 'panels_module/js/ajax_forms.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,12 @@
+div.joke-box{
+    text-align: center;
+    margin: 0 2rem;
+}
+h2.joke-title{
+    font-family: Calibri;
+    color: white;
+}
+#options{
+    display: flex;
+    justify-content: center;
+}

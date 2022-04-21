@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load render_partial %}
+
+{% block title %}games{% endblock %}
+{% block body %}
+    <h1 class="title">games</h1>
+    <ul>
+    {% for game in games %}
+        <li>
+            <a class="a" href="{{ game }}">{{ game }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

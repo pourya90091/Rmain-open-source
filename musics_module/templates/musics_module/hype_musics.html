@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block title %}hype musics{% endblock %}
+{% block body_header %}{% render_partial 'musics_module.views.musics_header' %}{% endblock %}
+{% block body %}
+    <ul>
+    {% for hype_music in hype_musics %}
+        <li>
+            <a class="a" href="{% url 'music-page' hype_music.name %}">{{ hype_music.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
