@@ -4,7 +4,7 @@ const weather_url = `https://api.openweathermap.org/data/2.5/weather?id=${city_i
 
 function fetch(data) {
     var temp = document.getElementById("temp");
-    temp.innerHTML = data.main.temp;
+    temp.innerHTML = Math.round(data.main.temp - 273.15) + "°C";
 }
 
 (function temp() {
